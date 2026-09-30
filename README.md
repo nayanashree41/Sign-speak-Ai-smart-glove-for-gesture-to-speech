@@ -1,0 +1,1 @@
+# Sign-speak-Ai-smart-glove-for-gesture-to-speech
