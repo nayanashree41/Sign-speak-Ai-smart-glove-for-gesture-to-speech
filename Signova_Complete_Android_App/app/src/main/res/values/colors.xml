@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="signova_red">#FF3047</color>
+    <color name="signova_red_dark">#C8132C</color>
+    <color name="signova_pink">#FF4D72</color>
+    <color name="signova_purple">#B94EF0</color>
+    <color name="signova_lilac">#D98AF5</color>
+    <color name="signova_lilac_soft">#F3E8FF</color>
+    <color name="signova_black">#090A0F</color>
+    <color name="signova_surface">#15151E</color>
+    <color name="signova_surface_2">#1D1D28</color>
+    <color name="signova_surface_3">#262532</color>
+    <color name="signova_text">#FAF8FD</color>
+    <color name="signova_muted">#9A98A7</color>
+    <color name="signova_light_bg">#FAF8FD</color>
+    <color name="signova_light_text">#17131D</color>
+    <color name="signova_light_muted">#746E7E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

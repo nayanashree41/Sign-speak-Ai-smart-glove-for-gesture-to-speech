@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/signova_light_bg">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.20" android:scaleType="centerCrop" android:src="@drawable/gesture_pattern" android:contentDescription="Gesture pattern" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <ImageView android:layout_width="50dp" android:layout_height="38dp" android:src="@drawable/signova_mark" android:adjustViewBounds="true" android:contentDescription="Signova logo" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Learn Gestures" android:textColor="#17131D" android:textSize="26sp" android:textStyle="bold" />
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Practice the first gesture vocabulary for your Signova glove." android:textColor="#62596A" android:textSize="16sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:background="@drawable/bg_light_card" android:text="HELLO  •  WATER  •  FOOD\nHELP  •  YES  •  NO\nI  •  NEED  •  THANK YOU\nMEDICINE  •  EMERGENCY" android:textColor="#3D3345" android:textSize="18sp" android:lineSpacingExtra="10dp" android:padding="20dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_lilac_card" android:text="The final gesture shapes will be calibrated from your real five flex sensors and MPU6050 dataset." android:textColor="#513260" android:textSize="15sp" android:lineSpacingExtra="4dp" />
+            <Button android:id="@+id/btnLearnHome" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="22dp" android:background="@drawable/bg_black_button" android:text="Back to Home" android:textAllCaps="false" android:textColor="@color/white" android:textStyle="bold" android:backgroundTint="@null" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

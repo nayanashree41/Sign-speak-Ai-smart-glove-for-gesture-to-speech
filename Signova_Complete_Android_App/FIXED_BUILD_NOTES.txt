@@ -1,0 +1,16 @@
+Signova build configuration fix
+===============================
+
+This project is pinned to the compatible build stack:
+- Android Gradle Plugin: 8.7.3
+- Gradle: 8.9
+- Java/JDK: 17
+- compileSdk: 35
+- targetSdk: 35
+- minSdk: 26
+
+The previous ZIP did not contain a Gradle wrapper configuration, so Android Studio attempted to use/download Gradle 9.3.0. This version now includes gradle/wrapper/gradle-wrapper.properties pinned to Gradle 8.9 and increases the Gradle download timeout to 120 seconds.
+
+Open the project folder itself (the folder containing settings.gradle.kts) in Android Studio. In Settings > Build, Execution, Deployment > Build Tools > Gradle, use Android Studio's Embedded JDK / JDK 17.
+
+The first sync may still need internet once to download Gradle 8.9 and Android/Maven dependencies if they are not already cached.

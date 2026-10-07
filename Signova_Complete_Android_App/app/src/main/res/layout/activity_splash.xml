@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#060608">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_hand"
+        android:contentDescription="Hand gesture" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_splash_scrim" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp">
+
+        <Space android:layout_width="1dp" android:layout_height="76dp" />
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="78dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/signova_mark"
+            android:contentDescription="Signova logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign"
+                android:textColor="@color/white"
+                android:textSize="43sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ova"
+                android:textColor="@color/signova_red"
+                android:textSize="43sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:letterSpacing="0.28"
+            android:text="HANDS TO VOICE"
+            android:textColor="#D6FFFFFF"
+            android:textSize="11sp" />
+
+        <Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1" />
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="3dp"
+            android:background="@color/signova_red" />
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Communication\nhas no limits."
+            android:textColor="#EFFFFFFF"
+            android:textSize="18sp"
+            android:lineSpacingExtra="3dp" />
+
+        <Space android:layout_width="1dp" android:layout_height="42dp" />
+    </LinearLayout>
+</FrameLayout>

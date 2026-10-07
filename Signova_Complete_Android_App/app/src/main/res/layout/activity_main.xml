@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dark_gradient"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="38dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/signova_mark"
+                    android:contentDescription="Signova logo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sign" android:textColor="@color/white" android:textSize="25sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ova" android:textColor="@color/signova_red" android:textSize="25sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView android:layout_width="42dp" android:layout_height="42dp" android:gravity="center" android:text="♢" android:textColor="#EFEAF3" android:textSize="24sp" />
+                <TextView android:layout_width="42dp" android:layout_height="42dp" android:background="@drawable/bg_round_lilac" android:gravity="center" android:text="●" android:textColor="#7C538A" android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card_dark"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@drawable/bg_round_lilac" android:gravity="center" android:text="▥" android:textColor="#7E5290" android:textSize="20sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Connect Glove" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvConnectionStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Not connected" android:textColor="@color/signova_muted" android:textSize="12sp" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btnConnect"
+                    android:layout_width="94dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_primary_button"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:text="Connect"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" android:backgroundTint="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card_dark"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@drawable/bg_round_lilac" android:gravity="center" android:text="◇" android:textColor="#7E5290" android:textSize="22sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Simulation Mode" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Try the full flow without glove hardware" android:textColor="@color/signova_muted" android:textSize="12sp" />
+                </LinearLayout>
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchSimulation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:thumbTint="@color/signova_lilac"
+                    app:trackTint="@color/signova_purple" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_preview_frame"
+                android:elevation="3dp"
+                android:padding="1dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/splash_hand"
+                    android:contentDescription="Live gesture preview" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#42000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:text="●  Detecting..."
+                    android:textColor="@color/signova_red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="⌜                         ⌝\n\n\n\n⌞                         ⌟"
+                    android:textColor="@color/signova_lilac"
+                    android:textSize="23sp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card_dark"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@drawable/bg_round_lilac" android:gravity="center" android:text="✌" android:textColor="#7B4D8C" android:textSize="21sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Detected Gesture" android:textColor="@color/signova_muted" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvGesture" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Waiting..." android:textColor="@color/white" android:textSize="19sp" android:textStyle="bold" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="#C7C1CC" android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Confidence" android:textColor="#D0CCD5" android:textSize="13sp" />
+                    <TextView android:id="@+id/tvConfidence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="@color/white" android:textSize="15sp" />
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/progressConfidence"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="9dp"
+                    android:layout_marginTop="7dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressBackgroundTint="#3B3944"
+                    android:progressTint="@color/signova_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card_dark_accent"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Generated Sentence" android:textColor="@color/signova_muted" android:textSize="12sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_round_lilac" android:gravity="center" android:text="“" android:textColor="#7B4D8C" android:textSize="25sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvSentence" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:text="Your sentence will appear here." android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSequence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="No gestures yet"
+                android:textColor="#817E8A"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvRawSensor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Sensor stream: simulation"
+                android:textColor="#666471"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnSpeak"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_primary_button"
+                android:text="🔊  Speak"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" android:backgroundTint="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnSimulate"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_chip"
+                    android:text="Next Gesture"
+                    android:textAllCaps="false"
+                    android:textColor="#ECE8F0"
+                    android:textSize="13sp" android:backgroundTint="@null" />
+                <Space android:layout_width="8dp" android:layout_height="1dp" />
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_chip"
+                    android:text="Clear"
+                    android:textAllCaps="false"
+                    android:textColor="#ECE8F0"
+                    android:textSize="13sp" android:backgroundTint="@null" />
+                <Space android:layout_width="8dp" android:layout_height="1dp" />
+                <Button
+                    android:id="@+id/btnEmergency"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_chip"
+                    android:text="SOS"
+                    android:textAllCaps="false"
+                    android:textColor="@color/signova_red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" android:backgroundTint="@null" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_nav_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+        <Button android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:backgroundTint="@android:color/transparent" android:text="⌂\nHome" android:textAllCaps="false" android:textColor="@color/signova_red" android:textSize="12sp" />
+        <Button android:id="@+id/navHistory" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:backgroundTint="@android:color/transparent" android:text="◷\nHistory" android:textAllCaps="false" android:textColor="@color/signova_muted" android:textSize="12sp" />
+        <Button android:id="@+id/navLearn" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:backgroundTint="@android:color/transparent" android:text="▯\nLearn" android:textAllCaps="false" android:textColor="@color/signova_muted" android:textSize="12sp" />
+        <Button android:id="@+id/navSettings" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:backgroundTint="@android:color/transparent" android:text="⚙\nSettings" android:textAllCaps="false" android:textColor="@color/signova_muted" android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

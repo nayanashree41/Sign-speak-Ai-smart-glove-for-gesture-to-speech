@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/signova_light_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="50dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <ImageView android:layout_width="44dp" android:layout_height="34dp" android:src="@drawable/signova_mark" android:adjustViewBounds="true" android:contentDescription="Signova logo" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Settings" android:textColor="#17131D" android:textSize="25sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:background="@drawable/bg_light_card" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Communication" android:textColor="#2B2431" android:textSize="17sp" android:textStyle="bold" />
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchAutoSpeak" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Auto speak accepted gestures" android:textColor="#423B48" app:thumbTint="@color/signova_lilac" app:trackTint="@color/signova_purple" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_light_card" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Minimum confidence" android:textColor="#2B2431" android:textSize="16sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvThreshold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="80%" android:textColor="@color/signova_purple" android:textSize="14sp" />
+            <SeekBar android:id="@+id/seekThreshold" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="49" android:progress="30" android:progressTint="@color/signova_purple" android:thumbTint="@color/signova_purple" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_light_card" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Speech speed" android:textColor="#2B2431" android:textSize="16sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvSpeechRate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="1.0x" android:textColor="@color/signova_purple" android:textSize="14sp" />
+            <SeekBar android:id="@+id/seekSpeechRate" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:progress="50" android:progressTint="@color/signova_purple" android:thumbTint="@color/signova_purple" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_light_card" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Language" android:textColor="#2B2431" android:textSize="16sp" android:textStyle="bold" />
+            <Spinner android:id="@+id/spinnerLanguage" android:layout_width="match_parent" android:layout_height="56dp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnSaveSettings" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="20dp" android:background="@drawable/bg_primary_button" android:text="Save Settings" android:textAllCaps="false" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" android:backgroundTint="@null" />
+        <Button android:id="@+id/btnSettingsHome" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="8dp" android:background="@drawable/bg_black_button" android:text="Back to Home" android:textAllCaps="false" android:textColor="@color/white" android:backgroundTint="@null" />
+    </LinearLayout>
+</ScrollView>

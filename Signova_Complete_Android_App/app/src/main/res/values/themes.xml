@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Signova" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/signova_red</item>
+        <item name="colorSecondary">@color/signova_purple</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/signova_black</item>
+        <item name="android:navigationBarColor">@color/signova_black</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="Theme.Signova.Light" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/signova_red</item>
+        <item name="colorSecondary">@color/signova_purple</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/signova_light_bg</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>
